@@ -1,45 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Set the page title -->
     <title>Assignment 03</title>
-
-    <!-- Set the charset we're using to UTF-8 -->
     <meta charset="UTF-8" />
-
-    <!-- Set the screens default zoom / scale to 1 -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <!-- We are using a CSS Reset file to standardize browser default css -->
     <link rel="stylesheet" href="reset.css" />
-
-    <!-- This is where all of our awesome CSS code goes -->
     <link rel="stylesheet" href="style.css" />
-
-    <!-- Set the Favicon  -->
-    <link rel="icon" href="./images/favicon/rocket.svg" type="image/svg+xml" />
+    <link rel="icon" href="logo.png" type="image/svg+xml" />
   </head>
   <body>
-    <!--
-
-      ADD YOUR ASSIGNMENT 03 CODE
-
-      YOU MAY REMOVE THE BOILERPLATE CODE BELOW
-
-      IMPORTANT CHECKLIST:
-
-      - Are users able to create and delete to do list items?
-      - Have you set a favicon? (included - but it's a rocket)
-      - Do you have a css reset file? (included)
-      - Has a team member conducted a code review and left a GitHub Issue in your repo?
-      - Have you conducted a code review and left a GitHub Issue on your team member's repo?
-
-    -->
+    <header>
+        <section>
+            <img src="computer.gif" img width="200">
+        </section>
+        <section>
+            <div class="instructions">
+                <h2>INSTRUCTIONS</h2>
+            <ul>
+                <li>Type the task in the box and click the + button to add</li>
+                <li>Click once to mark as complete</li>
+                <li>Double click to remove</li>
+            </ul>
+            </div>
+        </section>
+    </header>
     <main>
-      <div id="app"></div>
+        <section>
+            <div class="tasks">
+                <div class="app">
+                    <h1>TO DO LIST</h1>
+                    <input type="text" id="input" placeholder="type here..">
+                    <div class="to-dos" id="taskContainer"></div>
+                </div>
+                <div class="plus">
+                    <button id="addTask">+</button>
+                </div>
+            </div>
+        </section>
     </main>
-
-    <!-- This is where we add our awesome JavaScript code -->
-    <script src="./main.js"></script>
+    <footer>
+        <div class="foot">
+            <section>
+                <button id="timeButton" type="button" onclick="displayDate()">Show date & time</button>
+                <p id="showDate"></p>
+            </section>
+            <section>
+                <img src="logo.png" img width="50">
+            </section>
+        </div>
+    </footer>
+    <script src="script.js"></script>
   </body>
 </html>
