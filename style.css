@@ -1,55 +1,105 @@
-/*
-  CSS File
-*/
-
-/*
- VARIABLES
-*/
-:root {
-  /* Core colours */
-  /* https://coolors.co/palette/e63946-f1faee-a8dadc-457b9d-1d3557 */
-  --colour-amaranth: #e63946;
-  --colour-peppermint: #f1faee;
-  --colour-aquaisland: #a8dadc;
-  --colour-wedgewood: #457b9d;
-  --colour-cello: #1d3557;
-
-  /* Header configuration */
-  --header-heading-colour: var(--colour-peppermint);
-
-  /* Body configuration */
-  --body-default-colour: var(--colour-cello);
-  --body-background-colour: var(--colour-peppermint);
+@font-face {
+    font-family: myFont;
+    src: url(Windows\ Regular.ttf);
 }
 
-/*
-  PAGE / BODY
-*/
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  color: var(--body-default-colour);
-  background-color: var(--body-background-colour);
+    font-family: myFont;
+    background-image: url(d7hftxdivxxvm.cloudfront.webp);
+    background-repeat:no-repeat;
+    background-size:100%;
 }
 
-main {
-  min-height: 100vh;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-inline: 80px;
 }
 
-/*
-  Screen reader text utility class
-*/
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
+h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tasks {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    max-height: 100%;
+    background: rgba(0, 0, 255, .5);
+    margin: auto;
+    max-width: 450px;
+}
+
+.app {
+    cursor: pointer;
+    color: white;
+    font-size: 2rem; 
+}
+
+.plus {
+    padding-top: 72px;
+    padding-left: 5px;
+}
+
+#input {
+    border-color: #808080;
+    border-width: 4px;
+}
+
+#addTask {
+    padding: 7px;
+    padding-left: 18px;
+    padding-right: 18px;
+    font-size: 1.5rem;
+    background-color: rgb(0, 0, 255);
+    color: white;
+    border-color: #808080;
+    border-width: 4px;
+    cursor: pointer;
+}
+
+.instructions {
+    color: black;
+    background-image: url(window2.jpg);
+    background-repeat:no-repeat;
+    background-size:100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    max-width: 310px;
+    max-height: 200px; 
+    font-size: large;
+}
+
+#timeButton {
+    background-color: #0000FF;
+    border-color: #808080;
+    border-width: 4px;
+    color: white;
+    padding: 5px;
+    cursor: pointer;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+footer {
+    background-color: #C0C0C0; 
+    position: fixed;
+    bottom: 0;
+    width: 100%;  
+    padding: 20px;
+}
+
+.foot {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-inline: 50px;
 }
